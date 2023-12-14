@@ -20,19 +20,19 @@ app.use(methodOverride(function (req, res) {
     }
 }));
 
-/*
+
 let todolist = [];
 
 /* The to do list and the form are displayed */
-/*app.get('/todo', function (req, res) {
+app.get('/todo', function (req, res) {
         res.render('todo.ejs', {
             todolist,
             clickHandler: "func1();"
         });
     })
 
-    /* Adding an item to the to do list */ 
-  /*  .post('/todo/add/', function (req, res) {
+    /* Adding an item to the to do list */
+    .post('/todo/add/', function (req, res) {
         // Escapes HTML special characters in attribute values as HTML entities
         let newTodo = sanitizer.escape(req.body.newtodo);
         if (req.body.newtodo != '') {
@@ -42,7 +42,7 @@ let todolist = [];
     })
 
     /* Deletes an item from the to do list */
-  /*  .get('/todo/delete/:id', function (req, res) {
+    .get('/todo/delete/:id', function (req, res) {
         if (req.params.id != '') {
             todolist.splice(req.params.id, 1);
         }
@@ -75,7 +75,7 @@ let todolist = [];
         }
         res.redirect('/todo');
     })
-    /* Redirects to the to do list if the page requested is not found 
+    /* Redirects to the to do list if the page requested is not found */
     .use(function (req, res, next) {
         res.redirect('/todo');
     })
@@ -83,60 +83,6 @@ let todolist = [];
     .listen(port, function () {
         // Logging to console
         console.log(`Todolist running on http://0.0.0.0:${port}`)
-    });*/
+    });
 // Export app
 module.exports = app;
-* Start Bootstrap - Freelancer v7.0.7 (https://startbootstrap.com/theme/freelancer)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE)
-
-//
-// Scripts
-// 
-
-window.addEventListener('DOMContentLoaded', event => {
-
-    // Navbar shrink function
-    var navbarShrink = function () {
-        const navbarCollapsible = document.body.querySelector('#mainNav');
-        if (!navbarCollapsible) {
-            return;
-        }
-        if (window.scrollY === 0) {
-            navbarCollapsible.classList.remove('navbar-shrink')
-        } else {
-            navbarCollapsible.classList.add('navbar-shrink')
-        }
-
-    };
-
-    // Shrink the navbar 
-    navbarShrink();
-
-    // Shrink the navbar when page is scrolled
-    document.addEventListener('scroll', navbarShrink);
-
-    // Activate Bootstrap scrollspy on the main nav element
-    const mainNav = document.body.querySelector('#mainNav');
-    if (mainNav) {
-        new bootstrap.ScrollSpy(document.body, {
-            target: '#mainNav',
-            rootMargin: '0px 0px -40%',
-        });
-    };
-
-    // Collapse responsive navbar when toggler is visible
-    const navbarToggler = document.body.querySelector('.navbar-toggler');
-    const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponsive .nav-link')
-    );
-    responsiveNavItems.map(function (responsiveNavItem) {
-        responsiveNavItem.addEventListener('click', () => {
-            if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                navbarToggler.click();
-            }
-        });
-    });
-
-});
-
