@@ -1,4 +1,4 @@
-/*const express = require('express'),
+const express = require('express'),
     bodyParser = require('body-parser'),
     // In order to use PUT HTTP verb to edit item
     methodOverride = require('method-override'),
@@ -20,9 +20,9 @@ app.use(methodOverride(function (req, res) {
     }
 }));
 
-
+/*
 let todolist = [];
-*/
+
 /* The to do list and the form are displayed */
 /*app.get('/todo', function (req, res) {
         res.render('todo.ejs', {
@@ -83,14 +83,14 @@ let todolist = [];
     .listen(port, function () {
         // Logging to console
         console.log(`Todolist running on http://0.0.0.0:${port}`)
-    });
+    });*/
 // Export app
 module.exports = app;
 *//*!
 * Start Bootstrap - Freelancer v7.0.7 (https://startbootstrap.com/theme/freelancer)
 * Copyright 2013-2023 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE)
-*/
+
 //
 // Scripts
 // 
